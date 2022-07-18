@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="border-app">
+      <div class="container">
+        <img src="src/weather.png" alt="" class="emoji" />
+        <form class="search-form" id="search-form">
+          <div class="row country-city">
+            <div class="col-4">
+              <input
+                type="text"
+                name="Country"
+                id="enter_country"
+                placeholder="Enter country"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                name="City"
+                id="enter_city"
+                placeholder="Enter city"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+          </div>
+        </form>
+        <img src="src/Sun.png" alt="" class="sun" />
+        <span class="current-date" id="current_date">
+          <script src="script.js"></script>
+          <br />
+        </span>
+        <span class="current-day" id="current_day_time"></span>
+        <span class="current-day" id="current_time"></span>
+        <div>
+          <h5 id="your_enter_city"></h5>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <ul>
+              <li>
+                <span id="current_temperature">current temperature</span> °C
+              </li>
+              <li>max: <span id="max_temperature"></span> °C</li>
+              <li>min:<span id="min_temperature"></span> °C</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Pressure: <span id="pressure"></span> mmHg</li>
+              <li id="precipitation">Precipitation</li>
+            </ul>
+          </div>
+          <h3>Place for Temperature chart</h3>
+        </div>
+        <div class="row">
+          <div class="col">Emoji 1</div>
+          <div class="col">Emoji 2</div>
+          <div class="col">Emoji 4</div>
+          <div class="col">Emoji 4</div>
+          <div class="col">Emoji 5</div>
+          <div class="w-100"></div>
+          <div class="col">min t</div>
+          <div class="col">min t</div>
+          <div class="col">min t</div>
+          <div class="col">min t</div>
+          <div class="col">min t</div>
+          <div class="w-100"></div>
+          <div class="col">max t</div>
+          <div class="col">max t</div>
+          <div class="col">max t</div>
+          <div class="col">max t</div>
+          <div class="col">max t</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
