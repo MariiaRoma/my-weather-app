@@ -1,13 +1,13 @@
-let now = new Date();
-let date = now.getDate();
+var now = new Date();
+var date = now.getDate();
 if (date < 10) {
   date = `0${date}`;
 }
-let month = now.getMonth() + 1;
+var month = now.getMonth() + 1;
 if (month < 10) {
   month = `0${month}`;
 }
-let year = now.getFullYear();
+var year = now.getFullYear();
 document.getElementById("current_date").innerHTML = `${date}/${month}/${year}`;
 let days = [
   "Sunday",
@@ -18,13 +18,13 @@ let days = [
   "Friday",
   "Saturday",
 ];
-let day = days[now.getDay()];
+var day = days[now.getDay()];
 document.getElementById("current_day_time").innerHTML = `${day}`;
 let hour = now.getHours();
 if (hour < 10) {
   hour = `0${hour}`;
 }
-let minutes = now.getMinutes();
+var minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
