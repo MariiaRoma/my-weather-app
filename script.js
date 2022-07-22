@@ -1,15 +1,17 @@
 var now = new Date();
-var date = now.getDate();
-if (date < 10) {
-  date = `0${date}`;
+var dateNow = now.getDate();
+if (dateNow < 10) {
+  dateNow = `0${date}`;
 }
 var month = now.getMonth() + 1;
 if (month < 10) {
   month = `0${month}`;
 }
 var year = now.getFullYear();
-document.getElementById("current_date").innerHTML = `${date}/${month}/${year}`;
-let days = [
+document.getElementById(
+  "current_date"
+).innerHTML = `${dateNow}/${month}/${year}`;
+var days = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -19,8 +21,8 @@ let days = [
   "Saturday",
 ];
 var day = days[now.getDay()];
-document.getElementById("current_day_time").innerHTML = `${day}`;
-let hour = now.getHours();
+document.querySelector("#current_day_time").innerHTML = `${day}`;
+var hour = now.getHours();
 if (hour < 10) {
   hour = `0${hour}`;
 }
@@ -28,12 +30,12 @@ var minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-document.getElementById("current_time").innerHTML = `${hour}:${minutes}`;
+document.querySelector("#current_time").innerHTML = `${hour}:${minutes}`;
 
 function displayweatherCondition(response) {
   console.log(response.data);
   document.querySelector("#your_enter_city").innerHTML = response.data.name;
-  let showTemperatureForCity = Math.round(response.data.main.temp);
+  var showTemperatureForCity = Math.round(response.data.main.temp);
   document.querySelector("#current_temperature").innerHTML =
     showTemperatureForCity;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
